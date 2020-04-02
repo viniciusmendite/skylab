@@ -2,13 +2,11 @@ import React from 'react';
 
 import './global.css';
 
-import Content from './components/Content';
+import Routes from './routes';
 
 function App() {
-  return (
-    
-      <Content />
-  
+  return (  
+      <Routes />   
   );
 }
 

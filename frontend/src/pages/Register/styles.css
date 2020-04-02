@@ -1,0 +1,62 @@
+.container{
+    margin-top: 100px;
+}
+
+.area-form{
+    max-width: 700px;
+    margin: 20px auto 0;
+    background: #fff;
+    padding: 25px;
+   border-radius: 6px;
+   box-shadow: 0 0 8px #da552f;
+}
+
+.area-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.area-form form label{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.area-form form input{
+    margin-bottom: 20px;
+    height: 42px;
+    border: 2px solid #da552f;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.area-form form textarea{
+    margin-bottom: 20px;
+    border: 2px solid #da552f;
+    border-radius: 4px;
+    font-size: 16px;
+    padding:10px;
+    resize: vertical;
+}
+
+.area-form form button {
+    height: 42px;
+    border-radius: 5px;
+    border: 2px solid #da552f;
+    background: none;
+    margin-top: 10px;
+    color: #da552f;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.area-form form button:hover{
+    background: #da552f;
+    color: #fff;
+}
