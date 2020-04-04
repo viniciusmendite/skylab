@@ -41,13 +41,13 @@ export default () => {
             <div className="area-form">
                 <form onSubmit={handleSaveLib}>
                     <label>Insira um título</label>
-                    <input type='text' placeholder="título..." value={title} onChange={e => setTitle(e.target.value)} />
+                    <input type='text' required placeholder="título..." value={title} onChange={e => setTitle(e.target.value)} />
 
                     <label>Insira uma url válida</label>
-                    <input type="url" placeholder="url..." value={url} onChange={e => setUrl(e.target.value)} />
+                    <input type="url" required placeholder="url..." value={url} onChange={e => setUrl(e.target.value)} />
 
                     <label>Faça uma breve descrição</label>
-                    <textarea placeholder="descrição..." value={description} onChange={e => setDescription(e.target.value)} />
+                    <textarea placeholder="descrição..." required value={description} onChange={e => setDescription(e.target.value)} />
 
                     <button type="submit">Enviar</button>
                 </form>

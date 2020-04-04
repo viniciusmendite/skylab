@@ -9,26 +9,42 @@ export default () => {
     document.title = 'Lista de Bibliotecas';
 
     const [libs, setLibs] = useState([]);
+    const [productInfo, setProductInfo] = useState([]);
+    const [page, setPage] = useState(1);
 
     const loadLibs = async () => {
-      
-        const response = await api.get('products');
+
+        const response = await api.get(`products?page=${page}`);
+
+        setProductInfo(response.data);
 
         setLibs(response.data.docs);
     }
 
     useEffect(() => {
         loadLibs();
-    });
+    }, [libs]);
 
     const handleDlete = async (id) => {
         try {
             await api.delete(`products/${id}`);
-          
+
             setLibs(libs.filter(lib => lib.id !== id));
         } catch (error) {
             alert('Falha ao deletar, tente novamente.')
         }
+    }
+
+    const prevPage = () => {
+        if (page === 1) return;
+
+        setPage(page - 1);
+    }
+
+    const nextPage = () => {
+        if (page === productInfo.pages) return;
+
+        setPage(page + 1);
     }
 
     return (
@@ -50,6 +66,10 @@ export default () => {
                     </article>
                 ))}
 
+                <div className="actions">
+                    <button disabled={page === 1} onClick={prevPage}>Anterior</button>
+                    <button disabled={page===productInfo.pages} onClick={nextPage}>Próxima</button>
+                </div>
             </div>
         </div>
     );

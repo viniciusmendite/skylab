@@ -10,7 +10,7 @@ header {
     box-shadow: 0 0 10px rgba(218, 85, 47, 0.9);
 }
 
-header a{
+header a {
     text-decoration: none;
     color: #FFF;
     font-size: 18px;
@@ -18,7 +18,7 @@ header a{
     transition: all 0.3s;
 }
 
-header a:hover{
+header a:hover {
     font-size: 22px;
     color: #999;
 }
@@ -41,20 +41,20 @@ header a:hover{
     box-shadow: 0 0 2px #4f4f4f;
 }
 
-.listArea .area-title{
+.listArea .area-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.listArea .area-title .icon{
+.listArea .area-title .icon {
     background: none;
     border: 0;
     cursor: pointer;
     transition: opacity 0.3s;
 }
 
-.listArea .area-title .icon:hover{
+.listArea .area-title .icon:hover {
     opacity: 0.7;
 }
 
@@ -81,7 +81,33 @@ header a:hover{
     transition: all 0.2s;
 }
 
-.listArea article a:hover{
+.listArea article a:hover {
     background: #da552f;
     color: #FFF;
+}
+
+.listArea .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.listArea .actions button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: #da552f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.listArea .actions button:hover {
+    opacity: 0.7;
+}
+
+.listArea .actions button[disabled] {
+    opacity: 0.5;
+    cursor: default;
 }
