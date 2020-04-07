@@ -2,7 +2,7 @@
 Aplicação de cadastro e listagens de bibliotecas desenvolvida com  NodeJS, ReactJS e React Native.
 
  ### Back-end: NodeJS
-Utilizei o ***express*** para fazer as rotas da aplicação, instalei o pacote *nodemon* para facilitar nas alterações do back-end. Como banco de dados foi usado o **MongoDB**, o ***mongoose*** para fazer as inserções e o **mongoose-paginate** para fazer as paginações. No momento não fiz autenticação, que na qual seria usado o ***celebrate***.
+Utilizei o ***express*** para fazer as rotas da aplicação, instalei o pacote *nodemon* para facilitar nas alterações do back-end. Como banco de dados foi usado o **MongoDB**, o ***mongoose*** para fazer as inserções e o **mongoose-paginate** para fazer as paginações. No momento não fiz validação, que na qual seria usado o ***celebrate***.
  #### Bibliotecas utilizadas
  - Cors
  - Express
